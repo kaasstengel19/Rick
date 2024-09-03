@@ -1,0 +1,5 @@
+size(220, 200);
+background(0, 16, 135);
+
+fill(90, 160, 200);
+tekst("yo");
