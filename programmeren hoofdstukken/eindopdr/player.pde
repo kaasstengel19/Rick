@@ -3,7 +3,7 @@ class Player {
   int x;
   int y;
   
-  int w;
+  float w;
   int h;
   
   boolean ml;
@@ -11,7 +11,15 @@ class Player {
   boolean mu;
   boolean md;
   
-  int s;
+   
+
+ 
+ int s;
+  
+ float left;
+ float right;
+ int top;
+ int bottom;
   
   Player(int startingX, int startingY, int startingW, int startingH){
     x = startingX;
@@ -24,8 +32,12 @@ class Player {
     mu = false;
     md = false;
     
-    s = 3;
+    s = 5;
     
+    left = x - w/2;
+    right = x + w/1.5;
+    top = y - h/2;
+    bottom = y + h/2;
   }
   
   void display(){
@@ -47,9 +59,21 @@ class Player {
   
   
   void move(){
+    
+ 
+  
+
+    
+    left = x - w/2;
+    right = x + w/1.5;
+    top = y - h/2;
+    bottom = y + h/2;
+    
+    
+    
     if (ml == true){
      x -= s;
-         if((x-ox) < 100){
+         if((x-ox) < -20){
       ox -= s;}
 
     }
