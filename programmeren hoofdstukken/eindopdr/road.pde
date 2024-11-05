@@ -62,3 +62,24 @@ void corner(int u, int o){
   rect(d-ox + 185, oy + a + 50, 50, 15);
   rect(d-ox + 285, oy + a + 50, 50, 15);
  }
+ 
+ void corner2(int u, int o){
+fill(60, 60, 70);
+ rect(u-ox + 30, o - 40, 60, 60);
+ rect(u-ox + 50, oy + o - 60, 60, 60);
+ rect(u-ox, oy + o - 90, 60, 60);
+ rect(u-ox + 70, oy + o, 60, 60);
+ fill(255, 255, 0);
+ rect(u-ox + 85, oy + o - 15, 15, 15);
+ rect(u-ox + 70, oy + o - 30, 15, 15);
+ rect(u-ox + 55, oy + o - 45, 15, 15);
+ }
+ 
+ void block(int x, int y){
+   fill(255, 0, 0);
+   rect(x-ox, oy+y, 20, 30);
+   fill(255, 255, 255);
+   rect(x-ox, oy+y + 30, 20, 30);
+   fill(255, 0, 0);
+   rect(x-ox, oy+y + 60, 20, 30);
+ }
