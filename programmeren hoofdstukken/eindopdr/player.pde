@@ -73,7 +73,7 @@ class Player {
     
     if (ml == true){
      x -= s;
-         if((x-ox) < -20){
+         if((x-ox) < 40){
       ox -= s;}
 
     }
@@ -98,5 +98,12 @@ class Player {
     y = y - s;
   }
 
+//if (x == -2000) {
+//  ml = false;
+//}
+
+//if (x == 3000) {
+//  mr = false;
+//}
 }
 }
