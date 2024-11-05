@@ -1,9 +1,9 @@
 class Ops{ 
-  int x;
-  int y;
+  float x;
+  float y;
   
   float w;
-  int h;
+  float h;
   
   boolean ml;
   boolean mr;
@@ -19,26 +19,27 @@ class Ops{
   
  float left;
  float right;
- int top;
- int bottom;
+ float top;
+ float bottom;
   
-  Ops(int startingX, int startingY, int startingW, int startingH){
+  Ops(float startingX, float startingY, float startingW, float startingH){
     x = startingX;
     y = startingY;
     w = startingW;
     h = startingH;
+    
     
     ml = false;
     mr = false;
     mu = false;
     md = false;
     
-    s = 2;
+    s = 1;
     
     left = x - w;
     right = x + w;
     top = y - h;
-    bottom = y + h;
+    bottom = y + h * 2.1;
   }
   
   void display(){
@@ -63,22 +64,25 @@ class Ops{
   }
   void move(){
      
+  x -= s;
+    
     left = x - w;
     right = x + w;
     top = y - h;
-    bottom = y + h * 2;
+    bottom = y + h * 2.1;
     
-    y = y + s;
+    if(x == 0){
+      x += s;}
     
-    if(y == 500){
-      s =- 2;
-  }
-  if(y == 0){
-    s =+2;
-  }
+ 
   
   }
   void kill(){
     alive = false;
   }
+  
+  //void reset(){
+  //  x = random(width - w);
+  // y = random(200, 50);
+  //}
 }
